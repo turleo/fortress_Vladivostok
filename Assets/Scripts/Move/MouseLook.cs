@@ -36,7 +36,6 @@ namespace Move
                 transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
                 playerBody.Rotate(Vector3.up * mouseX);
             }
-            Debug.Log(joystick.Direction);
         }
     }
 }

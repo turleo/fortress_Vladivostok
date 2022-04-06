@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace Data
 {
+    [Serializable]
     [CreateAssetMenu]
     public class DataUnit : ScriptableObject
     {
