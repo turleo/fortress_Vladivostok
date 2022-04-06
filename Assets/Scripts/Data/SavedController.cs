@@ -25,5 +25,12 @@ namespace Data
             PlayerPrefs.Save();
             available[id] = true;
         }
+
+        public string GetDataText(int i)
+        {
+            if (available[i])
+                return data[i].text;
+            return "Ещё не открыто";
+        }
     }
 }

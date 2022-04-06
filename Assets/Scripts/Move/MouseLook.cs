@@ -18,7 +18,7 @@ namespace Move
         void Start()
         {
 #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
 #endif
         }
 
