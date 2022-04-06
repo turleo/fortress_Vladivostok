@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3881087803549984439, guid: ec536a7718376554185e4a856d5ae230, type: 3}
       propertyPath: joystickType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec536a7718376554185e4a856d5ae230, type: 3}
@@ -710,8 +710,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4ac624ac2da0c449fbff18cec48496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 207
+  mouseSensitivity: 249
   playerBody: {fileID: 1470320144}
+  joystick: {fileID: 625140281}
 --- !u!1 &1151761237
 GameObject:
   m_ObjectHideFlags: 0
