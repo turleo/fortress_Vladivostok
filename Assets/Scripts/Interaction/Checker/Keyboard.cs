@@ -14,7 +14,6 @@ namespace Interaction.Checker
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 10, layerMask))
                 {
-                    print(hit.collider.tag);
                     if (hit.collider.CompareTag("Interactable"))
                     {
                         hit.collider.GetComponent<Interactable.Interactable>().Interact();
