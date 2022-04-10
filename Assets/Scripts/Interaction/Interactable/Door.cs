@@ -5,6 +5,7 @@ namespace Interaction.Interactable
 {
     public class Door : Interactable
     {
+
         private bool _rotated = false;
 
         public Vector3 startValue;
@@ -17,6 +18,10 @@ namespace Interaction.Interactable
             else
                 transform.DORotate(endValue, 1, 0);
             _rotated = !_rotated;
+        }
+        public override string Hint()
+        {
+            return "открыть";
         }
     }
 }
