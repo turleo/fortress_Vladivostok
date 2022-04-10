@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class FirstPersonLook : MonoBehaviour
 {
@@ -44,9 +45,11 @@ public class FirstPersonLook : MonoBehaviour
         }
         else
         {
-            if (Input.touchCount > 0)
+            for (int i = 0; i < Input.touchCount; i++)
             {
-                Touch touch = Input.GetTouch(0);
+                Touch touch = Input.GetTouch(i);
+                if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+                    continue;
                 if (touch.phase == TouchPhase.Moved)
                 {
                     Vector2 mouseDelta = touch.deltaPosition;
