@@ -1873,7 +1873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8030454475985607420, guid: ed1be742fcb8e8c4e80f94ceccdb5958, type: 3}
       propertyPath: initialVelocity.z
-      value: -700
+      value: -900
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed1be742fcb8e8c4e80f94ceccdb5958, type: 3}

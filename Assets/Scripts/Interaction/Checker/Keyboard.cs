@@ -12,7 +12,7 @@ namespace Interaction.Checker
                 int layerMask = 1 << 8;
                 layerMask = ~layerMask;
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 1, layerMask))
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 4, layerMask))
                 {
                     if (hit.collider.CompareTag("Interactable"))
                     {
