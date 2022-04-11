@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class ChangeScene : MonoBehaviour
+namespace MainMenu
 {
-    public void NextLevel(string _scenename)
+    public class ChangeScene : MonoBehaviour
     {
-        SceneManager.LoadScene(_scenename);
+        public void NextLevel(string _scenename)
+        {
+            SceneManager.LoadScene(_scenename);
+        }
     }
 }

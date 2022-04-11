@@ -1,18 +1,19 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Data.Shower
 {
     public class TextChanger : MonoBehaviour
     {
         private SavedController _controller;
-        private TextMeshProUGUI _text;
-        public TMP_Dropdown dropdown;
+        private Text _text;
+        public UnityEngine.UI.Dropdown dropdown;
 
-        private void Start()
+        private void OnEnable()
         {
-            _text = GetComponent<TextMeshProUGUI>();
+            _text = GetComponent<Text>();
             _controller = FindObjectOfType<SavedController>();
 
             _text.text = _controller.GetDataText(0);

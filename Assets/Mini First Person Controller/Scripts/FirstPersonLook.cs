@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class FirstPersonLook : MonoBehaviour
@@ -14,6 +15,7 @@ public class FirstPersonLook : MonoBehaviour
     Vector2 velocity;
     Vector2 frameVelocity;
 
+    public UnityEvent onPause;
 
     void Reset()
     {
@@ -63,6 +65,11 @@ public class FirstPersonLook : MonoBehaviour
                     character.localRotation = Quaternion.AngleAxis(velocity.x, Vector3.up);
                 }
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            onPause.Invoke();
         }
     }
 }
