@@ -32,5 +32,12 @@ namespace Data
                 return data[i].text;
             return "Ещё не открыто";
         }
+
+        public bool CheckDataUnlocked(int id)
+        {
+            if (PlayerPrefs.GetInt(id.ToString(), 0) == 0)
+                return false;
+            return true;
+        }
     }
 }
