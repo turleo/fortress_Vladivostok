@@ -5,9 +5,10 @@ namespace Move
     public class CubeMover : MonoBehaviour
     {
         public Joystick joystick;
+        public GameObject[] hideOnTouch;
         [Range(0, 1)] public float speed;
         private Rigidbody _rigidbody;
-        private bool _isKeyboard = false;
+        public bool isKeyboard = false;
 
         void Awake()
         {
@@ -20,11 +21,15 @@ namespace Move
         {
             if (Input.anyKeyDown && !Input.GetKey(KeyCode.Mouse0))
             {
-                joystick.gameObject.SetActive(false);
-                _isKeyboard = true;
+                foreach (var o in hideOnTouch)
+                {
+                    o.SetActive(false);
+                }
+
+                isKeyboard = true;
             }
 
-            if (!_isKeyboard)
+            if (!isKeyboard)
             {
                 transform.Translate(joystick.Direction.x * speed, 0, joystick.Direction.y * speed);
                 Vector2 targetVelocity = new Vector2( Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
