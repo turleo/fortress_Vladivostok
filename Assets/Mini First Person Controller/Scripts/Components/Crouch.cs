@@ -109,6 +109,11 @@ public class Crouch : MonoBehaviour
         }
     }
 
+    public void SitStart()
+    {
+        
+    }
+
 
     #region Speed override.
     void SetSpeedOverrideActive(bool state)
