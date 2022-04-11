@@ -1,3 +1,4 @@
+using Data.Shower;
 using UnityEngine;
 
 namespace Data
@@ -6,6 +7,8 @@ namespace Data
     {
         public DataUnit[] data;
         public bool[] available;
+
+        public NotificationShower notification;
         void Start()
         {
             DontDestroyOnLoad(gameObject);
@@ -24,6 +27,8 @@ namespace Data
             PlayerPrefs.SetInt(id.ToString(), 1);
             PlayerPrefs.Save();
             available[id] = true;
+            notification.gameObject.SetActive(true);
+            notification.ShowData(id);
         }
 
         public string GetDataText(int i)
@@ -31,6 +36,11 @@ namespace Data
             if (available[i])
                 return data[i].text;
             return "Ещё не открыто";
+        }
+        
+        public string GetDataTitle(int i)
+        {
+            return data[i].title;
         }
 
         public bool CheckDataUnlocked(int id)
