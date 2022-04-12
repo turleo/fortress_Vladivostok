@@ -4088,7 +4088,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1773572615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1489024005}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1773572617}
+        m_TargetAssemblyTypeName: Data.Shower.NotificationShower, Assembly-CSharp
+        m_MethodName: ShowBigData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1773572615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4139,6 +4163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828a0aa58ebc4a64ea3a3b5984e1a8be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 1183821447}
+  seconds: 5
   text: {fileID: 1755847080}
 --- !u!1 &1803697886 stripped
 GameObject:
@@ -4486,6 +4512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef45cd11db46b64aa87db916d884324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 1720259381}
+  text: {fileID: 1985180146}
   dropdown: {fileID: 1183821447}
 --- !u!1 &2004416800
 GameObject:
