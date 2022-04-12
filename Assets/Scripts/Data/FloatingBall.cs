@@ -8,7 +8,7 @@ namespace Data
         public Vector3 endValue;
         void Start()
         {
-            transform.DOMove(endValue, 1).SetLoops(-1, LoopType.Yoyo);
+            transform.DOMove(new Vector3(transform.position.x, endValue.y + 28, transform.position.z), 1).SetLoops(-1, LoopType.Yoyo);
         }
     }
 }
