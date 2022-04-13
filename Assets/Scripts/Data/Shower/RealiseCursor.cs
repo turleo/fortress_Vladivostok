@@ -14,5 +14,11 @@ namespace Data.Shower
         {
             Cursor.lockState = CursorLockMode.None;
         }
+
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                gameObject.SetActive(false);
+        }
     }
 }
